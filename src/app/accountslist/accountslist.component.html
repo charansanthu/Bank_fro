@@ -1,0 +1,33 @@
+
+  <table class="table table-striped">
+ 
+    <thead> 
+      <tr> 
+         
+          <th scope="col">Account Number</th>
+          <th scope="col">Name</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Email</th>
+          <th scope="col">Company Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+        
+      </tr>
+      </thead> 
+      
+    <tbody>
+      <tr>
+          <td>{{accountrequest.accountnumber}}</td>
+          <td>{{accountrequest.name}}</td>
+          <td>{{accountrequest.phone}}</td>
+          <td>{{accountrequest.email}}</td>
+          <td>{{accountrequest.companyName}}</td>
+          <td>{{accountrequest.status}}</td>
+          <td>
+            <button id="requestAccountId" [disabled]="accountrequest.status!='Requested'" (click)="editaccount(accountrequest.accountnumber) ">Edit</button>
+            <button id="backId" (click)="viewaccount(accountrequest.accountnumber)">View</button>
+          </td>
+        </tr>
+
+    </tbody>
+   </table>

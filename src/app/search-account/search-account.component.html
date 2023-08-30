@@ -1,0 +1,21 @@
+
+    <title>Search Account</title>
+    <body>
+        * Required fields
+
+        <form class="example-form" #userForm="ngForm">
+        <br>
+        <br>
+        <br>
+        <p>{{disp_msg}}</p>
+        <div class="form-group">
+            <label for="accountnumber">Enter the Account Number*</label>
+            <input type="text" id="accountnumber" class="A" [(ngModel)]="user.accountnumber"  name="accountnumber"  #accountnumber="ngModel" required><br><br>
+        </div>
+
+        <button (click)="searchrequest()" routerList="/viewaccountdetails">Search</button>
+        <br>
+        
+        <a routerLink="/home" class="B" routerList="/home"> < Back </a> 
+        </form>
+    </body> 

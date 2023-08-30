@@ -1,0 +1,24 @@
+
+    <title>
+        View Account Details
+    </title>
+    <body>
+
+        <p>Name: {{account.name}}</p> 
+        <p>Address: {{account.address}}</p> 
+        <p>State: {{account.state}}</p> 
+        <p>Date of birth: {{account.dateofbirth}}</p> 
+        <p>Email: {{account.email}}</p> 
+        <p>Document number: {{account.documentnumber}}</p> 
+        <p>Phone number: {{account.phone}}</p> 
+        <p>Account Number: {{account.accountnumber}}</p> 
+        <p>Status: {{account.status}}</p> 
+
+
+        <br>
+        <br>
+        <button type="button"  [disabled]="account.status!='Requested'" (click)="editaccount(account.accountnumber)" >Edit</button>
+
+        <button type="button" routerLink="/accountslist">Cancel</button>
+    </body>
+
