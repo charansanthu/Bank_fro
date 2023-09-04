@@ -11,19 +11,16 @@ import { ViewAccountDetailsComponent } from './view-account-details/view-account
 import { EditAccountDetailsComponent } from './edit-account-details/edit-account-details.component';
 import { SearchAccountComponent } from './search-account/search-account.component';
 import { HomeComponent } from './home/home.component';
-import { AccountslistComponent } from './accountslist/accountslist.component';
-
+HomeComponent
 @NgModule({
   declarations: [
     AppComponent,
-   
     AccountRequestDetailsComponent,
     ListAccountRequestsComponent,
     ViewAccountDetailsComponent,
     EditAccountDetailsComponent,
     SearchAccountComponent,
-    HomeComponent,
-    AccountslistComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

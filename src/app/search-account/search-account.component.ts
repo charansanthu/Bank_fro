@@ -28,7 +28,7 @@ export class SearchAccountComponent implements OnInit {
         this.router.navigate(["/viewaccountdetails"])
       },
       error:err=>{
-        this.disp_msg="Invalid account number try again"
+        this.disp_msg=err.error
       }
     })
  }

@@ -24,15 +24,22 @@ export class AccountRequestDetailsComponent implements OnInit {
  accountrequest() {
   
   console.log(this.user);
-  this.bankservice.accountrequest(this.user).subscribe({
-    next:(_data: any)=>{this.disp_msg=" "+this.user.name+" your account created successfully";this.router.navigate(["/accountslist"])},
-      error:(e: any)=>{console.log(e);this.disp_msg="Failed to create account ";
-      
-  }
-   })
-
-  
-   
+  if(!(this.user.name.length>=3&&this.user.name.length<=20&&
+    this.user.address.length>=3 && this.user.address.length<=20)){
+      this.disp_msg="Invalid Input";
+}else{
+    this.bankservice.accountrequest(this.user).subscribe({
+      next:(_data: any)=>{
+        localStorage.setItem("new","Account created successfully")
+        this.router.navigate(["/accountslist"])},
+      error:err=>{
+        console.log(err)
+        console.log(err.error)
+        this.disp_msg=err.error
+      }
+        
+     })
+   }
 }
 
 

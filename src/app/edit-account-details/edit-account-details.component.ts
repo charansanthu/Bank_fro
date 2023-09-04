@@ -32,7 +32,7 @@ export class EditAccountDetailsComponent implements OnInit {
       console.log(this.edit);
       this.bankservice.editaccount(this.edit).subscribe({
        next:(_data: any)=>{this.disp_msg=" "+this.edit.name+" your account edited successfully";this.router.navigate(["/accountslist"])},
-         error:(e: any)=>{console.log(e);this.disp_msg="Failed to Edit account ";
+         error:(e: any)=>{console.log(e);this.disp_msg="Invalid Inputs";
          
       }
       })

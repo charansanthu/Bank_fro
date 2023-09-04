@@ -15,10 +15,8 @@ import {search} from '../User';
   export class ViewAccountDetailsComponent implements OnInit {
     @Input()
     account: accountrequest;
-    user:editaccountdetails
     disp_msg: string;
     constructor(private formbuilder:FormBuilder , private bankservice:BankServiceService , private router:Router) { 
-      this.user=new editaccountdetails();
     }
     form:FormGroup
     ngOnInit(): void {

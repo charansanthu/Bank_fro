@@ -1,24 +1,41 @@
+<title>
 
-    <title>
-        View Account Details
-    </title>
-    <body>
+    View Account Details
 
-        <p>Name: {{account.name}}</p> 
-        <p>Address: {{account.address}}</p> 
-        <p>State: {{account.state}}</p> 
-        <p>Date of birth: {{account.dateofbirth}}</p> 
-        <p>Email: {{account.email}}</p> 
-        <p>Document number: {{account.documentnumber}}</p> 
-        <p>Phone number: {{account.phone}}</p> 
-        <p>Account Number: {{account.accountnumber}}</p> 
-        <p>Status: {{account.status}}</p> 
+</title>
+
+<body>
 
 
-        <br>
-        <br>
-        <button type="button"  [disabled]="account.status!='Requested'" (click)="editaccount(account.accountnumber)" >Edit</button>
 
-        <button type="button" routerLink="/accountslist">Cancel</button>
-    </body>
+<div> <label id="nameId"> Name: {{account.name}} </label></div> <br>
 
+<div> <label id="addressId">Address: {{account.address}}</label> </div> <br>
+
+<div> <label id="stateId">State: {{account.state}}</label> </div> <br>
+
+<div> <label id="dobId">Date of birth: {{account.dateofbirth}}</label> </div> <br>
+
+<div> <label id="emailId">Email: {{account.email}}</label> </div> <br>
+
+<div> <label id="docNumberId">Document number: {{account.documentnumber}}</label> </div> <br>
+
+<div> <label id="phoneId">Phone number: {{account.phone}}</label> </div> <br>
+
+<div [hidden]="account.status =='Deferred' "></div>> <label id="accountId">Account Number: {{account.accountnumber}}</label> </div> <br>
+
+<div> <label id=”statusId”>Status: {{account.status}}</label> </div> <br>
+
+
+
+
+
+<br>
+
+<br>
+
+<button id="editId" type="button"  [disabled]="account.status!='Requested'" (click)="editaccount(account.accountnumber)"  >Edit</button>
+
+<button  id="cancelId" type="button" routerLink="/accountslist">Cancel</button>
+
+</body>
